@@ -1,6 +1,6 @@
 "use client";
 
-//import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import { useEffect } from "react";
 
 import { useToast } from "@/components/ui/use-toast";
@@ -22,7 +22,7 @@ const Checkout = ({
   const { toast } = useToast();
 
   useEffect(() => {
-    //loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+    loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
   }, []);
 
   useEffect(() => {
